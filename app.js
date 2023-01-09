@@ -1,11 +1,16 @@
-const width = 10;
-const height = 5;
-const space = width * height;
-console.log(space);
-const volume = 2**3;// Тоже самое что 2*2*2
-console.log(volume);
+//Операторы присваивания
+let age = 18 + 2;
+age++;// можно age += 2 это равно как age = age + 2
+age += 4;// age = age + 4
+age *= 6;// age = age * 6
+age /= 2;// age = age / 2
+age++;
+console.log(age);
 
-//строки конкатинация
-const city = 'Москва';
-const street = 'Новослободская';
-console.log(city + ', ' + street + ' ' + 5);
+//Операторы срвнения
+const vasya = 20;
+console.log(age > vasya);
+console.log(age >= vasya);
+console.log(age < vasya);
+console.log(age <= vasya);
+console.log(age == vasya);
