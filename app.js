@@ -1,16 +1,12 @@
-const bmw = 20000;
-bmw > 10000?console.log('Велосипед'):console.log('Bmw')//это выражение
-//if(bmw>10000){
-//console.log('bike');
-//}else{
-// console.log('Bmw')
-//}
+let check = prompt(`Сколько будет 7 + или - 15`);
+switch(true){
+    case check === 'Я не робот':
+    case Number(check) === 22:
+    case Number(check) === -8:
+        console.log('Успех');
+        break;
+    default:
+        console.log('Извините, вы робот');            
+}
 
-//let result = bmw > 5000?'Bike':'Another';//Это выражение
-//console.log(result);
 
-//По своей сути if является утверждением
-//утверждениемы не можем засунуть в переменную
-//Выражение можем засунуть в `${}`
-//утверждение это statement
-console.log(`Я куплю новый мерседес ${bmw > 5000?'AMG':'Another'}`);
