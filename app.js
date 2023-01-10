@@ -1,21 +1,36 @@
-const secretNumber = 7;
-if(secretNumber == 7){//Проверяет только значение
-    console.log('Угадал. Не строгое равенство');
-}
+const role = 'manager';
 
-if(secretNumber === 7){//Проверяет еще  и значение, и тип!!!!
-    console.log('Угадал. Строгое равенство!!');
-}
-//А если строка то '7' == 7 true
-//                  '7' === 7 false
-//                  Number('7') === 7 true
-
-let num = prompt('Input num: ');
-//let num = Number(prompt('Input num: ')); можно сразу оборачивать считывание строки с браузера
-if(num === 7){// false, но если Number(num) === 7 true
-//if(Number(num) === 7)true    
-    console.log('All are ok!!');
-
+if(role === 'manager'){
+    console.log('manager');
+}else if(role === 'ceo'){
+    console.log('ceo');
 }else{
-    console.log('It is not ok');
+    console.log('who are you?');
+}
+
+const role2 = 'master';
+switch(role2){
+    case 'manager': // role2 === 'manager'
+        console.log('Hi manager');
+        break;
+    case 'master':
+        console.log('Hi, master!!!');
+        break;
+    default:
+        console.log('Who are you?');    
+
+}
+
+
+const num = 1;
+switch(true){
+    case num > 0: //true === num > 0
+        console.log('Positive');
+        break;
+    case num < 0:
+        console.log('Negative');
+        break;
+    default:
+        console.log('0');        
+
 }
