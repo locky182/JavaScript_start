@@ -1,11 +1,6 @@
-const isAdmin = true;
-const isSuperAdmin = false;
-
-console.log(`Править файлы ${isAdmin&&isSuperAdmin}`);
-//&& -> и
-// || -> или
-// ! -> не
-if(isAdmin||isAdmin){
-    console.log('Write');
-}
- 
+console.log('Вася'||'Олег');//true
+console.log(false||'Олег');//Олег
+console.log(false||false);//false
+console.log('Вася'||false);//Вася
+//следовательно выводит только true,а любое имя это true
+console.log('Вася'&&'Maga');//true будет судить попоследнему по Maga
