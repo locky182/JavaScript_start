@@ -1,18 +1,9 @@
-function fromMilesToKm(miles){
-    const km = miles/0.62137;
-    return km;
-
+const pof = function(num){//функция присваивается переменной
+    return num * num;
 }
-
-let resultOfKm = fromMilesToKm(4);
-console.log(resultOfKm);
-console.log(resultOfKm);
-console.log(resultOfKm);
-console.log(resultOfKm);
-console.log(resultOfKm);
-
-function logName(name, surname){
-    console.log(`Мое имя ${name}, фамилия ${surname}`);
-}
-
-logName('Alexey', 'Liahov');
+//переменная стала функцией
+console.log(pof(6));//передача аргументов
+//есть понятие как всплытие
+//если переменную-функцию вывести до обьявления то она не сработает
+//потому что о ней не знает компилятор
+//но такого нет с обычными функциями
