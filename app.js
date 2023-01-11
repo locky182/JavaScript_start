@@ -1,5 +1,13 @@
-//Параметры по умолчанию 2
-//Второй параметр поумолчанию
-//если мы вообще не передаем второй аргумент
-const toPowerArrow = (num, power = 2) => num**power;
-console.log(toPowerArrow(2, 3));
+function canAccesWebsite(age){
+    if(age>18){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+const isCan = canAccesWebsite(17);
+//console.log(isCan);
+
+const canAccesWebsite2 = (age) => age < 18 ? 'No': 'Yes';
+console.log(canAccesWebsite2(16));
