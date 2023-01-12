@@ -1,14 +1,6 @@
-function getData(){
-    return ['Anton', 18, 'Moskow'];
-}
-
-// const userName = getData()[0];
-// const age = getData()[1];
-// const city = getData()[2];
-
-// console.log(userName + age + city);
-
-//const [userName, age, city] = getData();//деструктуризация
-const [userName,_, city] = getData();//что не нужно можем опустить
-//console.log(userName + ' ' + age + ' ' + city);
-console.log(userName, city);
+const data = [1, 2, 3, 4, 5, 6];
+const [one, two, three, ...others] = data;
+console.log(one, two, three, others);
+console.log(typeof(one));//Number
+//others is array
+//others [4,5,6]
