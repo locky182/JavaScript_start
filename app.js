@@ -1,6 +1,18 @@
-const data = [1, 2, 3, 4, 5, 6];
-const [one, two, three, ...others] = data;
-console.log(one, two, three, others);
-console.log(typeof(one));//Number
-//others is array
-//others [4,5,6]
+const url = 'https://purpleschool.ru/course/javascript';
+
+//Протокол (https)
+//Доменное имя (purpleschool.ru)
+//Путь внутри сайта (/course/javascript)
+
+function getUrlParts(url){
+const [protocol, _, host, ...path] = url.split('/');
+if(protocol === 'https:'|| protocol ==='http:'){
+    console.log(protocol, host, path);
+    console.log(`Протокол ${protocol.split(':')[0]}`);
+    console.log(`Доменное имя ${host}`);
+    console.log(`Путь внутри сайта /${path.join('/')} `);
+
+}
+}
+
+getUrlParts(url);
