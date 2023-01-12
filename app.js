@@ -1,43 +1,14 @@
-//задача
-
-//const task = ['задача 1'];
-//добавление задачи в конец списка
-//метод push()
-// function addTaskToEnd(myArrayTask, task){
-//     result = myArrayTask.push(task);//push меняет исходный массив
-//     console.log(myArrayTask);
-
-// }
-
-// const tasks = ['task 1'];
-// addTaskToEnd(tasks, 'task 2');
-// console.log(tasks);
-//+++++++++++++++++++++++++++++++++++++++++++++
-//удаление задачи по названию 
-
-const tasks2 = ['user', 'admin', 'superUser'];
-function delTaskForName(myArrayTask, task){
-    const index = myArrayTask.indexOf(task);//может удалять по индексу
-    if(index === -1){
-        return;//благодаря return мы выйдем полностью из функции 
-    }//и не будем выполнятькод ниже
-    myArrayTask.splice(index,1);
-    console.log(myArrayTask);
+function getData(){
+    return ['Anton', 18, 'Moskow'];
 }
 
+// const userName = getData()[0];
+// const age = getData()[1];
+// const city = getData()[2];
 
-delTaskForName(tasks2, 'user');
-console.log(tasks2);//массив изменен
-//++++++++++++++++++++++++++++++++++++++++++++++
-//Перенос задачи в начало списка по названию
-// function carryTaskToTheStart(myArrayTask, task){
-//     const res = myArrayTask.unshift(task);
-//     myArrayTask.splice(-1);
-//     console.log(myArrayTask);
-// }
-   
+// console.log(userName + age + city);
 
-
-// const tasks2 = ['user', 'admin', 'superUser'];
-// carryTaskToTheStart(tasks2, 'superUser' );
-// console.log(tasks2);//массив изменен
+//const [userName, age, city] = getData();//деструктуризация
+const [userName,_, city] = getData();//что не нужно можем опустить
+//console.log(userName + ' ' + age + ' ' + city);
+console.log(userName, city);
