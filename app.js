@@ -1,19 +1,19 @@
-function add(a, b){
-    return a + b;
+// function power(pow){
+//     return function(num){
+//         return num**pow;
+//     }
+// }
+
+// // const powerOfTwo = power(4);//данная переменная и является
+// // вложенной анонимной функцией
+// console.log(powerOfTwo(5));
+//console.log(power(3)(2));//это болеекороткая запись
+//каждая скобка идет в глубь вложенной функции 
+
+function power(num){
+    return function(pow){
+        return num**pow;
+    }
 }
 
-function subtract(a, b){
-    return a - b;
-}
-
-//Функция высшего порядкаб которой подается другая функ в качестве аргумента
-//это называется callback
-function calculate(a, b, fn){
-    console.log(fn.name);
-    let res = fn(a, b);
-    console.log(res);
-    
-}
-
-calculate(2,4,subtract);
-
+console.log(power(2)(3));
