@@ -1,26 +1,13 @@
-const score = [11,23,34,47,55,67,77];
-// for(const el of score){
-//     console.log(`Раунд ${el}`);
-// }
-//долгий способ
-// for(const[index, element] of score.entries()){//метод возвращает индекс и значение
-//     console.log(`${index + 1} ${element}`);
-//     }
-//Стрелочная функция
-// score.forEach((element)=>{//стрелочная функция
-//     console.log(`Element ${element}`);
-
-// });
-//слово функция
-//score.forEach(function(el){
-//console.log(`Element ${el}`);
-//});
-//
-//
-//стрелочная функция без обозначения{}потому что одна строчка
-score.forEach((el)=> console.log(`Score ${el}`));
-//так же можем поставить вторым аргументом индекс
-score.forEach((el, index)=>{
-    console.log(`Index of el: ${index + 1} and el: ${el} `);
+//map() это преобразование элемента
+//возвращает нам новый массив
+//map только return
+//trunsuctionInRub это массив
+const trunsuctionInUsd = [10, 490, 23, 45,21];
+const trunsuctionInRub = trunsuctionInUsd
+.map((truns) =>{
+  return truns * 60;
+    
 });
-//Здесь будут всегда итерироваться элементы, потому что break нельзя ставить
+console.log(trunsuctionInUsd);
+console.log(trunsuctionInRub);
+console.log(typeof(trunsuctionInRub));
