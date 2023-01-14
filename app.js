@@ -1,15 +1,13 @@
-const arr = [3,2,45,78,55];
-//это самодельная функция
-function some(arr, element){
- const res = arr.find((el)=> el === element);
- return res === undefined ? false : true
- 
-}
+//flat and flatMap
+//flat(плоский) делает из двумерного массива в одномерный
+// const prices = [[1,3],[4,6],[7,8]];
+// const res = prices.flat();//flat(?) аргумент это степень вложенности которую надо развернуть
+// console.log(res);//[1,3,4,6,7,8]
 
-const res = some(arr,45);
+//+++++++++++++++++++++++++++++++++++++++
+
+const prices = [[1,3],[4,6],[7,[1,2,3,4,5]]];
+const res = prices.flat(2);//flat(1) аргумент это степень вложенности которую надо развернуть
 console.log(res);
-//Это встроенная функция sum()
-console.log(arr.some(el=> el === 99));//some()/ true/false
-
-
-
+//проще по одиночке .map(?).flat или наоборот
+//flatMap  сначала map потом flat
