@@ -1,9 +1,15 @@
-const arr = [1,3,5,8,9];
-//найти первый элемент > 5 = 8
-//если не найдет этот элемент то он будет undefined
-const firstGT5 = arr.find(elem => elem > 5);
-const firstIndexGT5 = arr.findIndex(elem => elem > 3);
-console.log(firstGT5);//8
-console.log(firstIndexGT5);//2 индекс элемента который больше 3
-//если индекс не найден то -1 мы элемент не нашли 
-//если индекс элемента === -1 то его нет
+const arr = [3,2,45,78,55];
+//это самодельная функция
+function some(arr, element){
+ const res = arr.find((el)=> el === element);
+ return res === undefined ? false : true
+ 
+}
+
+const res = some(arr,45);
+console.log(res);
+//Это встроенная функция sum()
+console.log(arr.some(el=> el === 99));//some()/ true/false
+
+
+
