@@ -1,29 +1,10 @@
-//filter фильтрация данных
-//возвращает новый массив
-//оставитьэлементы которые удовлетворяют этому условию
-//возвращает значение если true
-//фильтрует все что false
-const operations = [-40,1,-56,2,-54];
-// let positivOperations = [];
-// for(operatia of operations){
-  
-//   if(operatia > 0){
-//     positivOperations.push(operatia);
+//если массив одинарный то мы просто на прямую работаем с элементами
+//если двойной то уточняем []
+//задача получить результирующий массив
+//положительной разници элементов
+const prices = [[100, 200],[120,100],[200,350]];
+const result = prices
+    .map((product) => product[1] - product[0])
+    .filter((price) => price > 0);
+    console.log(result);
 
-//   } 
-
-// }
-// console.log(positivOperations);
-
-// const positivOperations = operations
-// .filter((operatia) =>{
-//     return operatia > -40;
-// });
-// console.log(positivOperations);
-
-//это приминение сразу filter and map
-const positiveOperationInRub = operations
-    .filter((operatia) => operatia > 0)
-    .map((operatia) => operatia * 60);
-
-    console.log(positiveOperationInRub);
