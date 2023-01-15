@@ -1,18 +1,14 @@
-//Задача на выделение имени
-//Вывод 'Вася Пупкин'
-let userName = 'Вася aka Terminator Пупкин';
-// let res = userName.split(' ');
-// res.splice(1,2);
-// const fullName = res.join(' ');
-// console.log(fullName);
+//12.4 Преобразование строки
+const str = 'Вася Пупкина';
+console.log(str.startsWith('В'));//true
+console.log(str.endsWith('н'));//true
+console.log(str.toLowerCase());//'вася пупкин'
+console.log(str.includes('у'));//
+console.log(str.replace('В','Д'));
+console.log(str.replace(/а/g, 'и'));// это regex /а/g -все совпадения меняет на 'и'
+//обычно реплейс меняет только первое совпадение
 
-const firstName = userName.slice(0, userName.indexOf(' '));
-console.log(firstName);//возвращает строку в указанном диапозоне 'Вася'
-console.log(typeof(firstName));
-const lastName = userName
-    .slice(
-     userName.lastIndexOf(' ') + 1, userName.length);
-     console.log(lastName);
-
-     console.log(`${firstName} ${lastName}`);
-
+//+++++++++++++++++++++++++++++++++
+const str2 = '   Hi, how are      you   ';
+console.log(str2.trim());//чистит строку от пробелов
+//чистит перед первым словом и после конечного слова
