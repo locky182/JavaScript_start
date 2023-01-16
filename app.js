@@ -1,20 +1,25 @@
-const cityes = {
-   msk: {
-      temp: 24,
-      squer: 1000
-   },
-   spb: {temp: 35,
-   squer: 1200}
-};
-
-let countOfCity = Object.keys(cityes).length;//длина
-console.log(Object.keys(cityes));//возвращает массив ключей['msk','spb'] 
-let sumOfTemp = 0;
-for(const el in cityes){//проход по обьекту
-   
-   sumOfTemp += cityes[el].temp;
-
+//const {el, ...NameOfPropertyWhoStand} = user// rest -...
+let user = {
+   firstName: 'Pasha',
+   age: 40,
+   city: 'Moscow'
 }
 
-const averageOfTemp = sumOfTemp/countOfCity;
-console.log(averageOfTemp);//средняя температура
+const {age, ...userWithOutAge} = user;//деструктуризация обьекта
+console.log(age);//вытащили отдельно свойство
+console.log(userWithOutAge);
+//+++++++++++++++++++++++++++++++
+//добавить в обьект
+const additionalData = {
+   skills: ['Готовка', 'Программинг'],
+   creditCard: '123456789'
+};
+
+user.skills = additionalData.skills;//добавление в обьект
+user = {
+   ...user,//таким образом все переходит с usera
+   ...additionalData//все переходит из даты и не надо конкретно поле присваивать
+}
+console.log(user);
+
+//const обьектам если дополнительно наполняются свойства но не идет перезапись
