@@ -1,52 +1,20 @@
-//13.6 Упражнение - кошелёк
-//метод увеличения и уменьшения баланса
-//{reason: 'налог', sum: -100}
-//возвращает true or false еслибаланса не достаточно
-//метод числа операций по кошельку
-
-const wallet = {
-   balance: 0,
-   operations: [],
-
-   increase: function(sum, reason){
-      this.balance += sum;
-      this.operations.push({reason: reason,
-      sum: sum});
-      return true;
-
+const cityes = {
+   msk: {
+      temp: 24,
+      squer: 1000
    },
-
-   countOfOperations: function(){
-      return this.operations.length;
-
-   },
-
-   decrease: function(sum,reason){
-      if(this.balance > sum){
-         this.balance -= sum;
-         this.operations.push({reason: reason,
-      sum: sum});
-
-         return true;
-      }else{
-         return false;
-      }
-
-   }
-  
+   spb: {temp: 35,
+   squer: 1200}
 };
 
- console.log(wallet.increase(100,'Зарплата'));
- console.log(wallet.countOfOperations());
- console.log(wallet.increase(1000,'Левак'));
- console.log(wallet.countOfOperations());
- console.log(wallet.increase(3000,'Продажа'));
- console.log(wallet.countOfOperations());
- console.log(wallet.decrease(10000000, 'Покупка ноутбука'));
- console.log(wallet.operations);
+let countOfCity = Object.keys(cityes).length;//длина
+console.log(Object.keys(cityes));//возвращает массив ключей['msk','spb'] 
+let sumOfTemp = 0;
+for(const el in cityes){//проход по обьекту
+   
+   sumOfTemp += cityes[el].temp;
 
+}
 
-
-
-
-
+const averageOfTemp = sumOfTemp/countOfCity;
+console.log(averageOfTemp);//средняя температура
