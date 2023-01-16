@@ -1,11 +1,24 @@
-//13.3 Упражнение - сортировка пользователей
+//преобразование обьектов
+//преобразовать до вида {fullNmame: 'Вася Пупкин', scillNum: 2}
 const users = [
-{name: 'Вася', age: 30},
-{name: 'Катя' , age: 18 },
-{name:'Аня' , age: 40 },
-{name: 'Петя' , age: 25 }
+   {
+   name: 'Вася',
+   surname: 'Пупкин',
+   age: 30,
+   skills: ['Разработка', 'DevOps']
+   },
+   {
+   name: 'Катя',
+   surname: 'Белова',
+   age: 18,
+   skills: ['Дизайн']
+   }
 ];
 
-console.log(users.sort((a,b)=> a.age - b.age));//сортировка по возрастанию
-//обращаемся к свойствам
-   
+const userData = users.map((user)=>{
+   return {
+      fullName: `${user.name} ${user.surname}`,
+   scillNum: `${user.skills.length}`};
+});
+
+console.log(userData);
